@@ -1,0 +1,31 @@
+body{
+ background-image: radial-gradient(circle, #7ccefd, #83cff9, #8acff4, #90d0f0, #97d0ec, #92cdeb, #8ccaea, #87c7e9, #74bfea, #61b7ec, #4eafee, #3aa6ef);
+  padding: 90px 180px;
+  text-align: center;
+}
+
+img{ 
+    align-items: center;
+    width: 10%;
+    border-radius: 50% 
+};
+
+
+h1 {
+    background-color: aliceblue;
+    color: blue;
+    text-align: center;
+    font-size: 200%;
+
+}
+
+#acerca-de {
+    text-align: justify;
+    color: rgb(6, 25, 94);
+    font-size: 200%;
+}
+
+.subtitulo{
+    color: blue;
+    font-size: 200%;
+}
