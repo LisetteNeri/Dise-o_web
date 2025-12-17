@@ -1,0 +1,78 @@
+:root {
+    /* Morados Primarios */
+    --color-primary-dark: rgb(124, 0, 128); /* Títulos, Bordes, Énfasis*/
+    --color-bg-body: rgb(255, 224, 255); /* Fondo General*/
+    --color-text-dark: black; /* Color de Texto */
+    --color-shadow: rgba(0, 0, 0, 0.15); /* Color de la Sombra */
+    --color-section-bg:  rgb(255, 237, 255); /* Fondo de cada sección de la página */
+    --color-heading-separator: #e0c8ff; /* Separador de encabezado */
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--color-bg-body);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+/* Título Principal */
+h1 {
+    text-align: center;
+    color: var(--color-primary-dark);
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--color-primary-dark);
+    display: block;
+}
+
+/* Contenedores de Página*/
+div {
+    max-width: 800px; 
+    margin: 30px auto; 
+    padding: 20px;
+    background-color: var(--color-section-bg);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px var(--color-shadow);
+    border: 1px solid var(--color-primary-dark); 
+}
+
+/* Subtitulos */
+div p {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: var(--color-primary-dark);
+    border-bottom: 2px dashed var(--color-heading-separator);
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Estilos de las Imágenes (Responsividad) */
+img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 15px auto; 
+    border-radius: 8px;
+    border: 1px solid #ddd; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para cuando hay dos imágenes seguidas (Página 3: Aviso de privacidad) */
+@media (min-width: 400px) {
+    div:nth-of-type(3) {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        gap: 15px;
+    }
+
+    div:nth-of-type(3) img {
+        width: calc(50% - 10px);
+        margin: 0;
+    }
+}
