@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Eventos - Participantes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="participantes.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Sistema de Eventos</div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="participantes.html" class ="active">Participantes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="info-evento-cabecera">
+            <div class="evento-info-container">
+                <h2 id="nombre-evento-titulo">Seleccione un evento en el Inicio</h2>
+                <p id="detalle-evento-sub" style="color: #64748b; margin-top: 5px;"></p>
+            </div>
+            <div class="contadores-resumen">
+                <p id="contador-asistentes">Asistentes: 0</p>
+                <p id="contador-ponentes">Ponentes: 0</p>
+                <p id="contador-total">Total: 0</p>
+            </div>
+        </section>
+
+        <div class="tabs">
+            <input type="radio" name="tabs" id="tab1" checked>
+            <label for="tab1">Lista de Asistentes</label>
+            
+            <input type="radio" name="tabs" id="tab2">
+            <label for="tab2">Lista de Ponentes</label>
+
+            <input type="radio" name="tabs" id="tab3">
+            <label for="tab3">Estadísticas</label>
+
+            <div class="tab-content" id="content1">
+                <table id="tabla-asistentes">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th> 
+                            <th>Email</th> 
+                            <th>Empresa</th> 
+                            <th>Nivel</th> 
+                            <th>Fecha Registro</th>
+                         </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div id="asistentes-vacio" style="display:none;">No hay asistentes registrados.</div>
+            </div>
+
+            <div class="tab-content" id="content2">
+                <div id="lista-ponentes" class="grid-ponentes">
+                    </div>
+                <div id="ponentes-vacio" style="display:none;">No hay ponentes confirmados.</div>
+            </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

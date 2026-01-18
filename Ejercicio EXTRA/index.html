@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Eventos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="eventos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Sistema de Eventos</div>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="participantes.html">Participantes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filtros">
+            <input type="text" id="buscador" placeholder="Buscar por nombre...">
+            
+            <select id="filtro-categoria">
+                <option>Todas las categorías</option>
+                <option>Tecnología</option>
+                <option>Creatividad</option>
+                <option>Negocios</option>
+            </select>
+
+            <select id="ordenar-por">
+                <option value="recientes">Más recientes</option>
+                <option value="participantes">Más participantes</option>
+                <option value="nombre">Nombre A-Z</option>
+            </select>
+            
+            <input type="date" id ="filtro-fecha">
+        </section>
+        
+        <section class="grid-eventos" id="contenedor-eventos">
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

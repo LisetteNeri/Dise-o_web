@@ -1,0 +1,106 @@
+:root {
+    --primary: purple; 
+    --bg-light: rgb(255, 243, 255);
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --border: purple;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+header {
+    background: rgb(53, 1, 53);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 4rem;
+}
+
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--white); }
+
+nav ul { display: flex; list-style: none; gap: 2rem; margin: 0; padding: 0; }
+
+nav a { 
+    color: #94a3b8; 
+    text-decoration: none; 
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+nav a:hover, nav a.active { color: var(--white); }
+nav a.active { border-bottom: 2px solid var(--primary); padding-bottom: 4px; }
+
+.btn-primary, .btn-secondary, .btn-cancelar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { filter: brightness(1.2); }
+
+.btn-secondary { background: #eed7f5; color: #475569; border: 1px solid var(--border); }
+.btn-secondary:hover { background: #f0e2f0; }
+
+.btn-cancelar { background: rgb(60, 20, 117); color: var(--white); border: 1px solid rgb(60, 20, 117); }
+
+input:disabled, select:disabled, textarea:disabled {
+    background-color: #a375fa;
+    color: #94a3b8;
+    cursor: not-allowed;
+    border-color: #e2e8f0;
+}
+
+table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+table tbody tr:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+main {
+    animation: fadeInPage 0.4s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. Estilos para componentes dinámicos (Tab-Content) */
+.tab-content {
+    animation: slideTab 0.3s ease-out;
+}
+
+@keyframes slideTab {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}

@@ -1,0 +1,120 @@
+
+.contenedor-registro { 
+    max-width: 800px; 
+    margin: 3rem auto; 
+}
+
+.contenedor-registro h2 { 
+    text-align: center; 
+    color: #0f172a; 
+    margin-bottom: 2rem;
+}
+
+.form-registro {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.campos-comunes, .grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+label { 
+    display: block; 
+    font-weight: 600; 
+    font-size: 0.85rem; 
+    margin-bottom: 0.5rem; 
+    color: #475569; 
+}
+
+
+input:required:valid {
+    border-left: 4px solid var(--success);
+}
+
+input:focus:invalid {
+    border-left: 4px solid var(--error);
+}
+
+/* Secciones Dinámicas */
+#seccion-asistente { 
+    background: #f0effd; 
+    padding: 1.5rem; 
+    border-radius: 8px; 
+    border: 1px solid #c8a1ff; 
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+#seccion-ponente { 
+    background: #edf6ff; 
+    padding: 1.5rem; 
+    border-radius: 8px; 
+    border: 1px solid #bad3ff; 
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Selector de Rol */
+.tipo-selector {
+    display: flex;
+    gap: 1.5rem;
+    background: #f1f5f9;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.tipo-selector:hover {
+    border-color: var(--border);
+}
+
+.tipo-selector input { width: auto; margin-right: 5px; cursor: pointer;}
+.tipo-selector label { margin-bottom: 0; cursor: pointer; }
+
+/* Contenedor de Botones */
+.botones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.botones .btn-primary, 
+.botones .btn-cancelar, 
+.botones .btn-secondary { 
+    flex: 1; 
+}
+
+/* --- NUEVO: Hover en botones específicos del registro --- */
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(128, 0, 128, 0.2);
+}
+
+.btn-cancelar:hover {
+    background-color: rgb(86, 19, 167);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .campos-comunes, .grid-2-col { 
+        grid-template-columns: 1fr; 
+    }
+    .botones { 
+        flex-direction: column; 
+    }
+    textarea {
+        grid-column: span 1 !important;
+    }
+}

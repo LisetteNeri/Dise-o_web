@@ -1,0 +1,71 @@
+.info-evento-cabecera {
+    background: rgb(255, 243, 255);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}  
+
+#detalle-evento-sub { font-size: 0.9rem; font-weight: 500; }
+
+.contadores-resumen { display: flex; gap: 1.5rem; }
+.contadores-resumen p {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    color: purple;
+    margin: 0;
+}
+
+/* Sistema de Tabs */
+.tabs { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; }
+.tabs label {
+    padding: 1rem 2rem;
+    background: #e2e8f0;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    margin-right: 5px;
+}
+
+.tabs input[type="radio"] { display: none; }
+.tabs input[type="radio"]:checked + label { background: white; color: purple; }
+
+.tab-content {
+    width: 100%;
+    background: white;
+    padding: 2rem;
+    display: none;
+    border-radius: 0 12px 12px 12px;
+    box-shadow: var(--shadow);
+}
+
+/*Cuando el botón de opción (radio) esté marcado, busca el bloque de contenido correspondiente que está más adelante y muéstralo*/
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3 { display: block; }
+
+/* Tabla Asistentes */
+#tabla-asistentes { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+#tabla-asistentes th, #tabla-asistentes td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid purple;
+}
+
+
+.grid-ponentes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-ponente {
+    border-left: 5px solid yellow;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #fafafa;
+    border: 1px solid var(--border);
+}
