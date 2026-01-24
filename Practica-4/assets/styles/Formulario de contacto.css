@@ -1,0 +1,142 @@
+form { /*2 Selector de etiqueta*/
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px); 
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px var(--shadow-dark);
+    width: 100%;
+}
+
+h2 { /*3 Selector de etiqueta*/
+    color: var(--text-white);
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+p { /*4 Selector de etiqueta*/
+    color: var(--text-white);
+}
+
+label {/*5 /*Selector de etiqueta*/
+    color: var(--text-white);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+textarea {
+    resize: none; 
+    height: 100px;
+}
+
+.container { /*1 Selector de clase*/
+    max-width: 550px;
+    width: 90%;
+    position: relative;
+    z-index: 1;
+}
+
+.botones { /*2 Selector de clase*/
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-enviar { /*3 Selector de clase*/
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    flex: 2;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-limpiar {
+    background: var(--glass-bg);
+    color: var(--text-white);
+    border: 2px solid var(--shadow-light);
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1;
+    cursor: pointer;
+}
+
+#formulario-registro input, /*1 Selector de ID*/
+#formulario-registro select, 
+#formulario-registro textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--input-bg);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+
+#especificar-otro {  /*1 Selector de ID*/
+    display: none; 
+}
+
+#seccion-terminos {
+    margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+#seccion-terminos label {
+    display: flex;          
+    align-items: center;    
+    gap: 12px;             
+    color: var(--text-white);
+    font-size: 0.95rem;
+    cursor: pointer;
+    line-height: 1;         
+}
+
+#seccion-terminos input[type="checkbox"] {
+    width: 18px;           
+    height: 18px;         
+    margin: 0;              
+    cursor: pointer;
+    flex-shrink: 0;       
+}
+
+.btn-enviar:hover { /*Selector de seudoclase*/
+    transform: scale(1.03);
+    cursor: pointer;
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+input::placeholder { /*Selector de seudoelemento*/
+    color: #888;
+    font-style: italic;
+}
+
+input:focus, select:focus, textarea:focus {  /*Selector de seudoclase*/
+    outline: none;
+    box-shadow: 0 0 20px var(--shadow-light);
+}
+
+input:invalid:not(:placeholder-shown) {  /*Selector de seudoclase*/
+    border: 1.5px solid var(--color-invalid);
+    background-color: rgba(255, 235, 235, 0.95);
+}
+
+input:valid:not(:placeholder-shown) {
+    border: 2px solid var(--color-valid);
+    background-color: rgba(235, 255, 235, 0.95);
+}
+
+@media (max-width: 480px) {
+    body {
+        justify-content: center; 
+        padding-left: 0;
+    }
+    .botones {
+        flex-direction: column;
+    }
+}

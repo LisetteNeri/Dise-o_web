@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="/assets/styles/styles-generales.css">
+    <link rel="stylesheet" href="/assets/styles/Formulario de contacto.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <div class="container">
+        <form class="form-registro" id="formulario-registro">
+            <h2>¡Contactame!</h2>
+            <p>Los campos con * son obligatorios.</p>
+            <div>
+                <label for="nombre">Nombre completo: *</label>
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre completo" required>
+            </div>
+
+            <div>
+                <label for="email">Correo electronico: *</label>
+                <input type="email" id="email" placeholder="nombre@gmail.com" required>
+            </div>
+
+            <div>
+                <label for="tel">Teléfono:</label>
+                <input type="tel" id="tel" placeholder="5544332211">
+            </div>
+
+            <div>
+                <label for="opciones-motivo">Asunto/Motivo *</label>
+                <select id="opciones-motivo" required>
+                    <option value="">Selecciona un asunto</option>
+                    <option value="oferta">Oferta laboral</option>
+                    <option value="colaboracion">Colaboración</option>
+                    <option value="tecnica">Consulta técnica</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div id="especificar-otro">
+                <label for="otro-detalle">Especifique el motivo: *</label>
+                <input type="text" id="otro-detalle" placeholder="¿Cuál es el motivo?" required>
+            </div>
+
+            <div>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" placeholder="Describe tu mensaje en detalle..."></textarea>
+            </div>
+
+            <div id = "seccion-terminos">
+                <label for="terminos-y-condiciones">
+                <input type="checkbox" id="terminos-y-condiciones" required> Acepto la política de privacidad y términos de uso
+                </label>
+            </div>
+
+            <div class="botones">
+                <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                <button type="reset" class="btn-limpiar">Limpiar formulario</button>
+                
+            </div>
+        </form>
+    </div>
+    <div id="footer-container"></div>
+    <script src="/assets/js/main.js"></script>
+    <script>
+    // Desde la raíz, las carpetas están al mismo nivel
+    loadComponent('navbar-container', '../components/navbar.html');
+    loadComponent('footer-container', '../components/footer.html');
+    </script>
+
+
+
+
+    <script>
+    </script>
+</body>
+</html>

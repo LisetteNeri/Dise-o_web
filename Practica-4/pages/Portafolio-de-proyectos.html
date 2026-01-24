@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Proyect</title>
+    <link rel="stylesheet" href="/assets/styles/styles-generales.css">
+    <link rel="stylesheet" href="/assets/styles/Portafolio-de-proyectos.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <div>
+        <div class="container">
+            <article id="project-empowerfit" class="project-card">
+        <div>
+            <h2 id="project-title">E-commers Empowerfit</h2>
+            <img src="/assets/img/E-commers.png" alt="Captura de un E-commers" class="project-image">
+            <p class="project-description">En colaboración con un equipo, desarrollé Empowerfit, un proyecto final que consiste en un e-commerce colaborativo enfocado en la venta de artículos fitness. Además de la funcionalidad de venta, la plataforma integra un blog comunitario diseñado para que las usuarias compartan experiencias, consejos y motivación. El e-commerce está estructurado en los siguientes módulos clave:</p>
+            <ol>
+                <li>Página de Inicio: Presentación visual con banners y carruseles destacados.</li>
+                <li>Página de Productos: Catálogo de artículos disponibles.</li>
+                <li>Acerca de: Sección dedicada a la misión, visión y presentación de las creadoras del proyecto.</li>
+                <li>Comunidad (Blog): Espacio para compartir contenido.</li>
+                <li>Contacto: Formulario para consultas y soporte.</li>
+                <li>Autenticación: Páginas dedicadas al registro de nuevas usuarias e inicio de sesión.</li>
+                <li>Carrito de Compras: Módulo para gestionar los artículos seleccionados.</li>
+            </ol>
+            <p>Dado que se trató de un proyecto final de bootcamp, el desarrollo se concluyó sin implementar actualizaciones o mejoras posteriores a su entrega.</p>
+        </div>
+            <div class="tech-section">
+            <h3 class="tech-heading">Tecnologías Usadas</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS </li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>MySQL</li>
+            </ul>
+            </div>
+            <div class="links-container">
+                <a href="https://empowerfit.netlify.app/ " class="btn btn-demo" target="_blank">Link Netlify</a>
+            </div>
+        </article>
+        </div>
+
+        <div class="container">
+        <article id="project-ingles" class="project-card">
+        <div>
+            <h2 id="project-title">Evaluación Diagnostica Inglés</h2>
+            <img src="/assets/img/Login-Evaluacion-Ingles.png" alt="Captura pantalla de una evaluacion diagnostica de ingles" class="project-image">
+            <p class="project-description">Participé en la colaboración con un equipo de desarrollo para la creación de un quiz de diagnóstico de inglés. Esta herramienta digital está diseñada para funcionar como una Evaluación Diagnóstica de Inglés completa y estructurada, e incluye los siguientes componentes clave:</p>
+            <ol>
+                <li>Sistema de Acceso (Login): Para garantizar la identidad del usuario.</li>
+                <li>Página de Instrucciones: Detalla el formato y las reglas de la evaluación.</li>
+                <li>Acuerdo de Honestidad: Requiere la aceptación de la integridad académica.</li>
+                <li>Acuerdo de Confidencialidad: Establece el manejo de la información y contenido del examen.</li>
+                <li>Módulo de Quiz: La evaluación propiamente dicha, dividida en varias secciones o páginas.</li>
+            </ol>
+        </div>
+            <div class="tech-section">
+                <h3 class="tech-heading">Tecnologías Usadas</h3>
+                <ul>
+                    <li>React</li>
+                    <li>HTML</li>
+                    <li>CSS </li>
+                    <li>JavaScript</li>
+                    <li>Django REST Framework</li>
+                    <li>Python</li>
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+            <div class="links-container">
+                <a href="./Evaluacion-ingles.html" class="btn btn-demo" target="_blank">Ver más</a>
+            </div>
+        </article>
+        </div>
+
+        <div class="container">
+        <article id="project-consulta" class="project-card">
+        <div>
+            <h2 id="project-title">Sistema de consulta</h2>
+            <img src="/assets/img/Login-Sistema-Consulta.png" alt="Captura pantalla de sistema de consulta" class="project-image">
+            <p class="project-description">Colaboré con un equipo de desarrollo en la creación de un sistema de consulta integral. La función principal de la plataforma es restringir el acceso a las bases de datos solo a personal autorizado mediante credenciales (login). 
+            La aplicación consta de tres módulos clave: </p>
+            <ol>
+                <li>Módulo de Consultas: Una página principal diseñada para realizar búsquedas específicas aplicando diversos filtros.</li>
+                <li>Módulo de Reportes: Permite la generación de nuevos reportes a partir de la importación de documentos XLSX, facilitando la extracción y selección de columnas para su posterior exportación.</li>
+                <li>Módulo de Gráficos: Dedicado a la visualización de datos mediante gráficos.</li>
+            </ol>
+        </div>
+            <div class="tech-section">
+                <h3 class="tech-heading">Tecnologías Usadas</h3>
+                <ul>
+                    <li>React</li>
+                    <li>Axios</li>
+                    <li>HTML</li>
+                    <li>CSS </li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+            <p><strong>NOTA:</strong> El proyecto aun se encuentra en construcción</p>
+            <div class="links-container">
+                <a href="./Sistema-Consulta.html" class="btn btn-demo" target="_blank">Ver más</a>
+            </div>
+        </article>
+        </div>
+
+    </div>
+    <div id="footer-container"></div>
+    <script src="/assets/js/main.js"></script>
+    <script>
+    // Desde la raíz, las carpetas están al mismo nivel
+    loadComponent('navbar-container', '../components/navbar.html');
+    loadComponent('footer-container', '../components/footer.html');
+    </script>
+</body>
+</html>

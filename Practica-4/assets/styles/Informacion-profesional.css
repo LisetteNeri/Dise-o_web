@@ -1,0 +1,68 @@
+main.glass-container {
+    flex: 1;
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 80px auto;
+    max-width: 1100px;
+    width: 90%; /* Responsivo para móviles */
+    box-shadow: 0 8px 32px 0 var(--shadow-dark);
+    color: var(--text-white);
+    z-index: 1; /* Para que esté por encima del adorno del body::before */
+}
+
+/* Estilo de la imagen de perfil */
+.img-perfil{ 
+    width: 140px; /* Un poco más grande para que luzca */
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--border);
+    margin: 20px auto;
+    display: block;
+}
+
+/* Titulares limpios sin fondo sólido */
+h1 {
+    color: var(--text-white);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background-color: transparent; /* Quitamos el aliceblue */
+}
+
+.subtitulo {
+    color: var(--color-valid); /* Usamos tu color verde agua o un azul claro */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* Lista de contacto */
+.info-lista {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.redes-link {
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    color: var(--color-valid);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ .redes-link:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}

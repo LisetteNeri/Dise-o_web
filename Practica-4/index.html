@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mi</title>
+    <link rel="stylesheet" href="/assets/styles/styles-generales.css">
+    <link rel="stylesheet" href="/assets/styles//Informacion-profesional.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <main class ="glass-container">
+        <section class="perfil-header">
+            <div class="perfil-texto">
+                <h1>Lisette Aylin Neri Martínez</h1>
+                <h3 class="subtitulo">Desarrolladora Web Jr.</h3>
+            </div>
+
+            <div class="perfil-flex">
+                <div class="foto-marco">
+                    <img src="/assets/img/Foto_de_perfil.jpg" alt="Foto de mujer con fondo naranja" class="img-perfil">
+                </div>
+                <ul class="info-lista">
+                    <li><strong>Correo:</strong> lisette.neri.m@gmail.com </li>
+                    <li><strong>Teléfono:</strong> +52 5584971936 </li>  
+                    <li><strong>Residencia:</strong> Estado de México </li>
+                    <li class="redes"><a class="redes-link"  href="https://www.linkedin.com/in/lisette-neri/" target="_blank"> LinkedIn</a></li>
+                    <li class="redes"><a class="redes-link" href="https://github.com/LisetteNeri" target="_blank"> GitHub </a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="perfil-bio">
+            <p>Diseñadora Web con enfoque en UX/UI y apasionada por crear interfaces funcionales que mejoren la vida del usuario. Con experiencia en el desarrollo de sistemas de consulta y evaluación en INFOTEC, domino herramientas de diseño como Figma y frameworks como Bootstrap para crear sitios responsivos y atractivos. Mi capacidad de aprendizaje rápido y mi atención al detalle me permiten transformar requerimientos complejos en soluciones visuales intuitivas.</p>
+            <br>
+            <h3 class="subtitulo">Cursos y certificaciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ad. Rem magni quod dignissimos voluptatum voluptatibus? Dicta beatae mollitia, porro cum minus temporibus consequuntur error dolore quae expedita aspernatur ea? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolor molestias corporis enim animi asperiores laudantium dolore perspiciatis aliquid, adipisci hic aliquam atque unde, rerum officiis! At molestias illo laboriosam?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptatem praesentium maxime assumenda corrupti ratione ab libero, consequuntur placeat cumque magni officia, repellendus velit aspernatur reprehenderit at! Debitis, nobis quisquam!
+            </p>
+        </section>
+
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="/assets/js/main.js"></script>
+    <script>
+    // Desde la raíz, las carpetas están al mismo nivel
+    loadComponent('navbar-container', 'components/navbar.html');
+    loadComponent('footer-container', 'components/footer.html');
+    </script>
+</body>
+</html>
