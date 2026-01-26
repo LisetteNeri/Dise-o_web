@@ -4,25 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de project-consulta</title>
-    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="/assets/styles/styles-generales.css">
+    <link rel="stylesheet" href="/assets/styles/Card-de-proyectos.css">
 </head>
+
 <body>
+    <div id="navbar-container"></div>
+
     <h1> Sistema de consulta para departamento de certificaciones </h1>
-    <div>
-        <p>Pagina 1. Login</p>
-        <img src="./Img/Login-Sistema-Consulta.png" alt="Pagina de Login">
+    
+    <div class="glass-container card-proyecto">
+        <h3>Pagina 1. Login</h3>
+        <img class="img-card" src="/assets/img/Login-Sistema-Consulta.png" alt="Pagina de Login">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum vitae iure porro magni est id expedita ad maxime, ipsum, eaque dolores quisquam beatae sequi eum. Asperiores quis dolorem dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolorem officia magnam, facere magni animi ut natus ad. Quisquam et iste in amet quibusdam ullam nulla corporis adipisci alias provident.</p>
     </div>
-    <div>
-        <p>Pagina 2. Sistema de consulta</p>
-        <img src="./Img/Sistema-Consulta.png" alt="Sistema de consulta">
+
+    <div class="glass-container card-proyecto">
+        <h3>Pagina 2. Sistema de consulta</h3>
+        <img class="img-card" src="/assets/img/Sistema-Consulta.png" alt="Sistema de consulta">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita harum quia tenetur ut iste facilis neque quibusdam, id fugit quam quisquam laborum quis quaerat nobis pariatur, repellendus quidem at et! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quidem consequatur quasi architecto vitae aspernatur illum accusamus cumque necessitatibus quis maxime laboriosam, voluptatibus voluptate placeat eveniet aut inventore! Ipsa, a.</p>
     </div>
-    <div>
-        <p>Pagina 3. Generador de reportes</p>
-        <img src="./Img/Generador-Reportes-Sistema-Consulta.jpeg" alt="Generador de reportes">
+
+    <div class="glass-container card-proyecto">
+        <h3>Pagina 3. Generador de reportes</h3>
+        <img class="img-card" src="/assets/img/Generador-de-reportes.png" alt="Generador de reportes">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis mollitia modi blanditiis perspiciatis, architecto voluptates, error aperiam temporibus in provident nisi! Distinctio, placeat accusantium natus temporibus debitis est voluptas nesciunt. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit molestias maxime rerum assumenda dolor ut labore, velit modi, quia tempora et iure amet dolores eos repudiandae corrupti minima ipsa sed.</p>
     </div>
-    <div>
-        <p>Pagina 4. Generador de graficos</p>
-        <img src="./Img/Graficas-Sistema-Consulta.jpeg" alt="Generador de graficas">
+
+    <div class="glass-container card-proyecto">
+        <h3>Pagina 4. Generador de graficos</h3>
+        <img class="img-card" src="/assets/img/Graficas-Sistema-Consulta.jpeg" alt="Generador de graficas">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, possimus in voluptas delectus quasi nemo, hic officiis inventore provident voluptates consequuntur unde quas, ducimus vel dicta officia id ab necessitatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolores ipsum qui quis maiores, atque iure. A, voluptatum accusamus. Quae neque maiores ea sapiente dolor facilis qui illo, voluptates nam?</p>
     </div>
+
+    <div id="footer-container"></div>
+    <script src="/assets/js/main.js"></script>
+    <script>
+    // Desde la raíz, las carpetas están al mismo nivel
+    loadComponent('navbar-container', '../components/navbar.html');
+    loadComponent('footer-container', '../components/footer.html');
+    </script>
 </body>
 </html>

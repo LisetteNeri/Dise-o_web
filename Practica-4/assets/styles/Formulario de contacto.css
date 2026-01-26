@@ -1,11 +1,12 @@
 form { /*2 Selector de etiqueta*/
     background: var(--glass-bg);
-    backdrop-filter: blur(15px); 
+    backdrop-filter: blur(15px);
     padding: 40px;
     border-radius: 20px;
     border: 1px solid var(--border);
     box-shadow: 0 20px 50px var(--shadow-dark);
-    width: 100%;
+    flex: 1;
+    margin: 80px 40px;
 }
 
 h2 { /*3 Selector de etiqueta*/
@@ -31,10 +32,14 @@ textarea {
 }
 
 .container { /*1 Selector de clase*/
-    max-width: 550px;
+    max-width: 1300px;
     width: 90%;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto;
 }
 
 .botones { /*2 Selector de clase*/
@@ -139,4 +144,26 @@ input:valid:not(:placeholder-shown) {
     .botones {
         flex-direction: column;
     }
+}
+
+/* Nueva clase para el contenedor de la imagen */
+.contacto-imagen {
+    flex: 1; /* La imagen toma la otra mitad del espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-imagen img {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    border-radius: 20px;
+    filter: drop-shadow(0 10px 20px var(--shadow-dark));
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }

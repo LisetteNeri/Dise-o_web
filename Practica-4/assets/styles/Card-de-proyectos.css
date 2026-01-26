@@ -1,78 +1,84 @@
-:root {
-    /* Morados Primarios */
-    --color-primary-dark: rgb(124, 0, 128); /* Títulos, Bordes, Énfasis*/
-    --color-bg-body: rgb(255, 224, 255); /* Fondo General*/
-    --color-text-dark: black; /* Color de Texto */
-    --color-shadow: rgba(0, 0, 0, 0.15); /* Color de la Sombra */
-    --color-section-bg:  rgb(255, 237, 255); /* Fondo de cada sección de la página */
-    --color-heading-separator: #e0c8ff; /* Separador de encabezado */
-}
-
-/* Estilos Generales */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: var(--color-bg-body);
-    color: var(--color-text-dark);
-    line-height: 1.6;
-}
-
 /* Título Principal */
 h1 {
     text-align: center;
-    color: var(--color-primary-dark);
+    color: var(--color-valid);
     font-size: 2.5em;
-    margin-bottom: 40px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid var(--color-primary-dark);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 3px solid var(--shadow-dark);
     display: block;
 }
 
-/* Contenedores de Página*/
-div {
-    max-width: 800px; 
-    margin: 30px auto; 
-    padding: 20px;
-    background-color: var(--color-section-bg);
-    border-radius: 12px;
-    box-shadow: 0 6px 15px var(--color-shadow);
-    border: 1px solid var(--color-primary-dark); 
+.glass-container.card-proyecto {
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;         
+    align-items: flex-start; 
+    gap: 30px;               
+    padding: 35px;
+    margin-bottom: 40px;
+    text-align: justify;        
 }
 
-/* Subtitulos */
-div p {
-    font-size: 1.25em;
-    font-weight: bold;
-    color: var(--color-primary-dark);
-    border-bottom: 2px dashed var(--color-heading-separator);
+.glass-container.card-proyecto h3 {
+    flex: 0 0 100%; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border);
     padding-bottom: 10px;
-    margin-top: 0;
-    margin-bottom: 20px;
 }
 
-/* Estilos de las Imágenes (Responsividad) */
-img {
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 15px auto; 
-    border-radius: 8px;
-    border: 1px solid #ddd; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+.glass-container.card-proyecto .img-card {
+    flex: 0 0 45%;      
+    max-width: 45%;
+    height: auto;
+    margin: 0;           
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    box-shadow: 0 4px 15px var(--shadow-dark);
+    transition: transform 0.3s ease;
 }
 
-/* Estilo para cuando hay dos imágenes seguidas (Página 3: Aviso de privacidad) */
-@media (min-width: 400px) {
-    div:nth-of-type(3) {
-        display: flex;
-        flex-wrap: wrap; 
-        justify-content: space-between; 
-        gap: 15px;
+.glass-container.card-proyecto .img-card:hover {
+    transform: scale(1.02); 
+}
+
+/* 4. Estilo del Texto descriptivo */
+.glass-container.card-proyecto p {
+    flex: 1;             
+    margin: 0;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--text-white);
+    text-align: justify; 
+}
+/*Cuando hay dos imágenes */
+.glass-container.card-proyecto .grupo-imagenes {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+}
+
+.glass-container.card-proyecto .grupo-imagenes .img-card {
+    max-width: 100%;
+    width: 100%;
+}
+
+
+@media (max-width: 850px) {
+    .glass-container.card-proyecto {
+        flex-direction: column; 
+        align-items: center;
     }
 
-    div:nth-of-type(3) img {
-        width: calc(50% - 10px);
-        margin: 0;
+    .glass-container.card-proyecto .img-card,
+    .glass-container.card-proyecto .grupo-imagenes {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    
+    .glass-container.card-proyecto h3 {
+        text-align: center;
     }
 }

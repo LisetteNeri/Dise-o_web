@@ -1,13 +1,13 @@
 :root {
-    --primary-gradient: linear-gradient(135deg, #330859 0%, #e3adfb 100%);
+    --primary-gradient: linear-gradient(135deg, #330859 0%, #dd90fe 100%);
     --glass-bg: rgba(255, 255, 255, 0.15);
     --input-bg: rgba(255, 255, 255, 0.9);
-    --text-white: #ffffff;
+    --text-white: /*#ffffff*/#D1D1D1;
     --color-invalid:red;
-    --color-valid: rgb(110, 220, 184);
+    --color-valid:/* rgb(110, 220, 184)*/ #00D2FF;
     --btn-bg: #ffffff;
     --btn-text: #4f0491;
-    --shadow-dark: rgba(240, 11, 191, 0.2);
+    --shadow-dark: /*rgba(240, 11, 191, 0.2)*/ #77e6ff;
     --shadow-light: rgba(255, 255, 255, 0.4);
     --border: rgba(255, 255, 255, 0.3);
 }
@@ -15,24 +15,32 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100%; /* Obliga a la base a ser del ancho total de la pantalla */
+    width: 100%;
     min-height: 100vh;  
     font-family: 'Segoe UI', Roboto, sans-serif;
     background: var(--primary-gradient);
-    background-attachment: fixed; /*Se agrego*/
+    background-attachment: fixed; 
     display: flex;
-    flex-direction: column /*Se agrego*/;
+    flex-direction: column;
     align-items: stretch;
     overflow-x: hidden; 
+    transition: 0.3s;
 }
 
-main.glass-container{
+.glass-container {
+    flex: 1;
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 80px auto;
+    max-width: 1000px;
+    box-shadow: 0 8px 32px 0 var(--shadow-dark);
+    color: var(--text-white);
     flex:1;
 }
 
 /*-----------------------Navbar----------------------------*/
-/* Estilos para el Nav */
-
 .nav-container{
     display: flex;
     justify-content: space-between;
@@ -41,11 +49,11 @@ main.glass-container{
     box-shadow: 0 8px 32px 0 var(--shadow-dark);
     border-bottom: 1px solid var(--border);
     align-items:center;
-    padding: 0px 35px;
+    padding: 0px 60px;
 }
 
 #logo1{
-    border: 3px solid pink;
+    border: 3px solid #00D2FF;
     border-radius: 30%;
     width: 100px;
 }
@@ -74,17 +82,15 @@ main.glass-container{
     text-shadow: 0 0 10px var(--shadow-light);
 }
 
-
 /*----------------Footer------------------*/
-/* Estilos para el Footer */
+
 .footer {
     background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-top: 1px solid var(--border);
+    box-shadow: 0 8px 32px 0 var(--shadow-dark);
     color: var(--text-white);
-    padding: 30px 0;
-    margin-top: auto; /* Empuja el footer al final si usas flex en el body */
+    padding: 15px 0;
+    margin-top: auto;
     width: 100%;
 }
 
@@ -92,19 +98,23 @@ main.glass-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 0 5%;
+}
+
+.footer-text{
+    font-size: 1.2rem;
 }
 
 .footer-content a {
     color: var(--text-white);
-    margin-left: 15px;
-    text-decoration: none;
-    font-size: 0.9rem;
+    margin-left: 30px;
+    text-decoration:none;
+    font-size: 1.3rem;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 .footer-content a:hover {
     color: var(--color-valid);
+    text-shadow: 0 0 10px var(--shadow-light);
 }
