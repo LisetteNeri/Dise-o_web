@@ -1,0 +1,84 @@
+/* Título Principal */
+h1 {
+    text-align: center;
+    color: var(--color-valid);
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 3px solid var(--shadow-dark);
+    display: block;
+} 
+
+.glass-container.card-proyecto {
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;         
+    align-items: flex-start; 
+    gap: 30px;               
+    padding: 35px;
+    margin-bottom: 40px;
+    text-align: justify;        
+}
+
+.glass-container.card-proyecto h3 {
+    flex: 0 0 100%; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.glass-container.card-proyecto .img-card {
+    flex: 0 0 45%;      
+    max-width: 45%;
+    height: auto;
+    margin: 0;           
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    box-shadow: 0 4px 15px var(--shadow-dark);
+    transition: transform 0.3s ease;
+}
+
+.glass-container.card-proyecto .img-card:hover {
+    transform: scale(1.02); 
+}
+
+/* 4. Estilo del Texto descriptivo */
+.glass-container.card-proyecto p {
+    flex: 1;             
+    margin: 0;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--text-white);
+    text-align: justify; 
+}
+/*Cuando hay dos imágenes */
+.glass-container.card-proyecto .grupo-imagenes {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+}
+
+.glass-container.card-proyecto .grupo-imagenes .img-card {
+    max-width: 100%;
+    width: 100%;
+}
+
+
+@media (max-width: 850px) {
+    .glass-container.card-proyecto {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .glass-container.card-proyecto .img-card,
+    .glass-container.card-proyecto .grupo-imagenes {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    
+    .glass-container.card-proyecto h3 {
+        text-align: center;
+    }
+}

@@ -1,10 +1,23 @@
 <nav class="nav-container">
-  <div>
+  
     <img id="logo1" src="/assets/img/Logo1.jpeg" alt="logo de una cara de un conejo">
-  </div>
-  <ul class="paginas">
+
+    <button class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+  <ul class="paginas" id="nav-list">
     <li ><a class="link-pagina" href="/index.html">Inicio</a></li>
     <li ><a class="link-pagina" href="/pages/Portafolio-de-proyectos.html">Proyectos</a></li>
     <li ><a class="link-pagina" href="/pages/Formulario-de-contacto.html">Contacto</a></li>
   </ul>
 </nav>
+
+<script src="/assets/js/main.js"></script>
+<script>
+    // Ya no necesitas funciones anónimas ni callbacks aquí
+    loadComponent('navbar-container', 'components/navbar.html');
+    loadComponent('footer-container', 'components/footer.html');
+</script>

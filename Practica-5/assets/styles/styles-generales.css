@@ -30,6 +30,7 @@ body {
 .glass-container {
     flex: 1;
     background: var(--glass-bg);
+    background-attachment: fixed; 
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 40px;

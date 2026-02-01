@@ -1,0 +1,94 @@
+div:has(.container) {
+    display: grid;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto; 
+}
+
+/* Contenedor de la card */
+.container {
+    flex: 1;
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 80px auto;
+    max-width: 1000px;
+    box-shadow: 0 8px 32px 0 var(--shadow-dark);
+    color: var(--text-white);
+}
+
+.project-card {
+    height: 100%; /*ocupamos todo el largo del container*/
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card h2 {
+    color: var(--color-valid); 
+    margin-top: 0;
+    border-bottom: 3px solid var(--shadow-dark);
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/* Estilos para la imagen */
+.project-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    text-align: justify;
+}
+
+.project-card ol, .project-card ul {
+    padding-left: 50px;
+}
+
+.tech-section {
+    flex-grow: 1;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--shadow-dark);
+}
+
+.tech-heading {
+    color: var(--color-valid); 
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Contenedor de enlaces */
+.links-container {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.btn-demo {
+    padding: 10px 20px;
+    background-color: var(--shadow-light);
+    color: var(--btn-text);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-demo:hover {
+    background-color: var(--btn-bg);
+}
+
+/* --- Para pantallas mas pequeñas --- */
+
+/* Aplicamos 3 columnas cuando el ancho de la ventana es al menos 768px */
+@media (min-width: 1000px) {
+    div:has(.container) {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
